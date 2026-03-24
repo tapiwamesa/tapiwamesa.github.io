@@ -1,335 +1,573 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tapiwa Mesa</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tapiwa Mesa — Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <a href="index.html" class="logo">Home | </a>
-            
-            <button class="menu-toggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <nav id="nav">
-                <ul>
-                    <li><a href="#projects" class="nav-button">View My Work</a></li>
-                    <li><a href="assets\cv\TapiwaMesa_Resume.pdf" target="_blank" class="nav-button outline">Resume ↗</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <div class="profile-pic-container">
-                <img src="images\profile.jpg" alt="Profile" class="profile-pic">
-            </div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h1>Tapiwa Mesa</h1>
-            <h2>Senior Data Analyst | BI Specialist | Data-Driven Strategist</h2>
-            <p>Transforming raw data into actionable insights through analytics, visualization and machine learning.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="button">View My Work</a>
-                <a href="assets\cv\TapiwaMesa_Resume.pdf" target="_blank" class="button outline">Download Resume</a>
-            </div>
-        </div>
-    </section>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-    <!-- About Me Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p class="about-text">
-                    A Data Analyst dedicated to developing business intelligence solutions that leverage best practice technologies 
-                    to deliver data-driven insights. With over 5 years of experience in data analytics and reporting, statistical analysis 
-                    and business intelligence.
-                </p>
-            </div>
-        </div>
-    </section>
+  <!-- Particle Canvas -->
+  <canvas id="particle-canvas"></canvas>
 
-    <!-- Skills & Tools Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Skills & Tools</h2>
-            <div class="skills-grid">
-                <!-- Technical Skills -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
-                    <ul class="skills-list">
-                        <li><i class="fas fa-code"></i> Data Analysis & Manipulation</li>
-                        <li><i class="fas fa-database"></i> Database Management</li>
-                        <li><i class="fas fa-chart-line"></i> Data Visualization </li>
-                        <li><i class="fas fa-robot"></i> Machine Learning</li>
-                        <li><i class="fas fa-cloud"></i> Cloud Computing</li>
-                    </ul>
-                </div>
-                
-                <!-- Tools -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <ul class="skills-list">
-                        <li><i class="fab fa-microsoft"></i> Power BI</li>
-                        <li><i class="fas fa-file-excel"></i> Excel</li>
-                        <li><i class="fab fa-google"></i> Google Sheets</li>
-                        <li><i class="fas fa-database"></i> SQL</li>
-                        <li><i class="fab fa-python"></i> Python</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work History Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Work History</h2>
-            <div class="timeline">
-                <!-- Nestlé -->
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 2022 – Sept 2024</div>
-                    <div class="timeline-content">
-                        <h3>Data Analyst</h3>
-                        <h4>Nestlé – Harare, Zw</h4>
-                        <ul>
-                            <li><i class="fas fa-chart-line"></i> Designed and developed a BI Report for daily sales tracking, BU targets monitoring and business analysis improving decision-making efficiency</li>
-                            <li><i class="fas fa-robot"></i> Developed an Accounts Receivables Report in Power BI, integrated with SAP BW and automated via Power Automate, enabling real-time financial oversight for management</li>
-                            <li><i class="fas fa-users"></i> Led the Zimbabwe Sales Automation Project, training the Merchandising Agency and Distributors to enhance sales operations</li>
-                            <li><i class="fas fa-tachometer-alt"></i> Created a consolidated dashboard for Sales and Inventory using SAP Business Objects, integrating SAP BW with Microsoft Excel for improved reporting</li>
-                            <li><i class="fas fa-search-dollar"></i> Conducted market research and category share analysis, guiding strategic marketing initiatives</li>
-                            <li><i class="fas fa-balance-scale"></i> Performed value chain analysis and competitor price indexing, ensuring competitive pricing for the BU's products</li>
-                            <li><i class="fas fa-calculator"></i> Simulated profitable volume and product mix scenarios for monthly production and sales planning</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Zuva Petroleum (formerly BP & Shell Zimbabwe) -->
-                <div class="timeline-item">
-                    <div class="timeline-date">Sep 2019 – Jan 2022</div>
-                    <div class="timeline-content">
-                        <h3>Inventory Analyst</h3>
-                        <h4>Zuva Petroleum (formerly BP & Shell Zimbabwe) – Harare, Zw</h4>
-                        <ul>
-                            <li><i class="fas fa-chart-bar"></i> Led business dynamic forecasting for monthly sales planning, inventory optimization and product loss management</li>
-                            <li><i class="fas fa-truck"></i> Tracking fleet statistics and route optimization, reducing costs and improving delivery efficiency</li>
-                            <li><i class="fas fa-check-double"></i> Product reconciliations with all Terminals and regional LPG suppliers, ensuring accurate stock management</li>
-                            <li><i class="fas fa-warehouse"></i> Managed inventory across three product warehouses (LPG storage, LPG accessories and Lubricants & Oils), maintaining product variances</li>
-                            <li><i class="fas fa-tachometer-alt"></i> Developed an Automated Operations Dashboard, streamlining planning, product allocation and resource utilization across all terminals in Zimbabwe</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- Featured Projects Section -->
-<section id="projects" class="section">
+  <!-- Header -->
+  <header id="header">
     <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-carousel">
-            <button class="carousel-button prev" aria-label="Previous projects">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            
-            <div class="projects-container">
-                <div class="projects-track">
+      <a href="index.html" class="logo">T.MESA</a>
 
-                    <!-- Project 1 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/zse.jpg" alt="ETL Pipeline">
-                        </div>
-                        <div class="project-content">
-                            <h3>Stock Price prediction using LSTM on ZSE</h3>
-                            <p>A modified RNN that solves the vanishing gradient in LSTM using the three gates architecture.</p>
-                            <ul class="project-tags">
-                                <li><i class="fab fa-python"></i> Python</li>
-								<li><i class="fab fa-google"></i> Colab</li>
-								<li><i class="fas fa-chart-line"></i> Data Viz </li>
-								<li><i class="fas fa-robot"></i> ML</li>
-                            </ul>
-                            <a href="https://github.com/tapiwamesa/LSTM-ZSE-Price-Prediction-/blob/main/Final_Viva.ipynb" class="button">View Project</a>
-                        </div>
-                    </article>
+      <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
 
-                    <!-- Project 2 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/ETL.jpg" alt="ETL Pipeline">
-                        </div>
-                        <div class="project-content">
-                            <h3>Zimbabwe Housing Market ETL Pipeline</h3>
-                            <p>Python web scraper, SQL Server storage, and Power BI visualization for housing market analysis.</p>
-                            <ul class="project-tags">
-                                <li><i class="fab fa-python"></i> Python</li>
-                                <li><i class="fas fa-database"></i> SQL</li>
-                                <li><i class="fas fa-chart-bar"></i> Power BI</li>
-                            </ul>
-                            <a href="https://github.com/tapiwamesa/End-to-End-ETL-process-for-Zimbabwe-Housing-Data/blob/main/zw_housing_scrapping.ipynb" class="button">View Project</a>
-                        </div>
-                    </article>
-                    
-                    <!-- Project 3 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/supermarket.jpg" alt="Superstore Analysis">
-                        </div>
-                        <div class="project-content">
-                            <h3>Global Superstore Analysis</h3>
-                            <p>SQL analysis of shipping costs, profit and discounts to optimize business operations.</p>
-                            <ul class="project-tags">
-                                <li><i class="fas fa-database"></i> SQL</li>
-                                <li><i class="fas fa-chart-pie"></i> Analytics</li>
-                            </ul>
-                            <a href="https://github.com/tapiwamesa/SQL-Projects/blob/main/Sales%20Analysis%20SQL.ipynb" class="button">View Project</a>
-                        </div>
-                    </article>
+      <nav id="nav">
+        <ul>
+          <li><a href="#projects" class="nav-button">Work</a></li>
+          <li><a href="assets/cv/TapiwaMesa_Resume.pdf" target="_blank" class="nav-button outline">Resume ↗</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-                    <!-- Project 4 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/house.jpg" alt="Housing Prediction">
-                        </div>
-                        <div class="project-content">
-                            <h3>Housing Price Prediction App</h3>
-                            <p>Streamlit app for the housing price prediction, continuation of project #2.</p>
-                            <ul class="project-tags">
-                                <li><i class="fab fa-python"></i> Python (scikit-learn)</li>
-                                <li><i class="fas fa-robot"></i> Stream-lit</li>
-                            </ul>
-                            <a href="https://hararehouseprices.streamlit.app/" class="button">View App</a>
-                        </div>
-                    </article>
-
-			<!-- Project # -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/fraud.jpg" alt="Fraud detection">
-                        </div>
-                        <div class="project-content">
-                            <h3>Financial fraud detection using Machine Learning</h3>
-                            <p>Fraud detection using Logistic Regression, Random Forest and Gradient Boosting on a class-imbalanced dataset.</p>
-                            <ul class="project-tags">
-                                <li><i class="fab fa-python"></i> Python (scikit-learn)</li>
-                            </ul>
-                            <a href="https://github.com/tapiwamesa/Bank-Fraud-Detection-Using-Machine-Learning" class="button">View Project</a>
-                        </div>
-                    </article>
-			
-			<!-- Project # -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/L2.jpg" alt="L2 Regularization">
-                        </div>
-                        <div class="project-content">
-                            <h3>Effectivesness of L2 Regularization on Polynomial Features in Prediction</h3>
-                            <p>A comparative analysis of OLS and Polynomial regression in prediction.</p>
-                            <ul class="project-tags">
-                                <li><i class="fab fa-python"></i> Python (scikit-learn)</li>
-                            </ul>
-                            <a href="https://github.com/tapiwamesa/OLS-to-Polynomial-Features-Ridge-Regression" class="button">View Project</a>
-                        </div>
-                    </article>
-
-			<!-- Project # -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/mtn.jpg" alt="Customer churn">
-                        </div>
-                        <div class="project-content">
-                            <h3>Customer churn prediction for MTN Nigeria</h3>
-                            <p>A model that identifies customers who are at high risk of churning based on their historical behavior. (data source: kaggle)</p>
-                            <ul class="project-tags">
-                                <li><i class="fab fa-python"></i> Python (scikit-learn)</li>
-                            </ul>
-                            <a href="https://github.com/tapiwamesa/MTN-Nigeria-customer-churn-prediction-model" class="button">View Project</a>
-                        </div>
-                    </article>
-			
-                    <!-- Project # -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="images/Covid.jpg" alt="India Covid State Analysis">
-                        </div>
-                        <div class="project-content">
-                            <h3>Indian States Covid-19 Analysis</h3>
-                            <p>A basic python notebook analyzing Indian States covid-19 statistics.</p>
-                            <ul class="project-tags">
-                                <li><i class="fab fa-python"></i> Python (pandas, maplotlib)</li>
-                            </ul>
-                            <a href="https://github.com/tapiwamesa/India_Covid_States/blob/main/India_covid_statewise.ipynb" class="button">View Project</a>
-                        </div>
-                    </article>
-
-                    <!-- To ddd more projects here which are still WIP-->
-                </div>
-            </div>
-            
-            <button class="carousel-button next" aria-label="Next projects">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
+      <div class="profile-pic-container">
+        <img src="images/profile.jpg" alt="Tapiwa Mesa" class="profile-pic">
+      </div>
     </div>
-</section>
+  </header>
 
-    <!-- Get in Touch Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3><i class="fas fa-paper-plane"></i> Contact Information</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> tapiwamesah@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> +263 778 911 774</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Harare, Zimbabwe</li>
-                    </ul>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/tapiwamesa/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/tapiwamesa"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Initializing portfolio_v2025.exe</p>
+        <h1>
+          <span class="hero-name-line glitch" data-text="TAPIWA MESA">TAPIWA MESA</span>
+          <span class="hero-title-line">Senior Data Analyst</span>
+        </h1>
+        <p class="hero-desc">
+          Transforming raw data into actionable intelligence through advanced analytics,
+          BI engineering and machine learning. Building systems that make decisions smarter.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="button">View Projects</a>
+          <a href="assets/cv/TapiwaMesa_Resume.pdf" target="_blank" class="button outline">Download Resume ↗</a>
+        </div>
+        <div class="hero-stat-row">
+          <div class="hero-stat">
+            <span class="num" data-count="5">0</span>
+            <span class="label">Years Experience</span>
+          </div>
+          <div class="hero-stat">
+            <span class="num" data-count="8">0</span>
+            <span class="label">Projects Shipped</span>
+          </div>
+          <div class="hero-stat">
+            <span class="num" data-count="2">0</span>
+            <span class="label">Industries Served</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title" data-index="01">About Me</h2>
+      <div class="about-content">
+        <div class="about-text reveal">
+          <p>
+            A <strong>Data Analyst</strong> dedicated to developing business intelligence solutions
+            that leverage best-practice technologies to deliver data-driven insights.
+          </p>
+          <p style="margin-top:1rem;">
+            With over <strong>5 years</strong> of experience spanning data analytics, statistical analysis
+            and BI development, I bridge the gap between raw data and strategic action — 
+            from manufacturing forecasting at <strong>Nestlé</strong> to inventory intelligence at
+            <strong>Zuva Petroleum</strong>.
+          </p>
+          <p style="margin-top:1rem;">
+            I build pipelines, dashboards and ML models that don't just look good —
+            they drive real operational change.
+          </p>
+        </div>
+        <div class="about-terminal reveal">
+          <div class="terminal-bar">
+            <div class="terminal-dot"></div>
+            <div class="terminal-dot"></div>
+            <div class="terminal-dot"></div>
+            <span class="terminal-title">mesa@portfolio ~ profile.sh</span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat profile.json</span></div>
+            <div class="t-line"><span class="t-output">{ "role": <span class="t-highlight">"Senior Data Analyst"</span>,</span></div>
+            <div class="t-line"><span class="t-output">&nbsp;&nbsp;"location": <span class="t-highlight">"Harare, ZW"</span>,</span></div>
+            <div class="t-line"><span class="t-output">&nbsp;&nbsp;"exp_years": <span class="t-highlight">5</span>,</span></div>
+            <div class="t-line"><span class="t-output">&nbsp;&nbsp;"stack": [<span class="t-highlight">"Python"</span>, <span class="t-highlight">"SQL"</span>,</span></div>
+            <div class="t-line"><span class="t-output">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-highlight">"Power BI"</span>, <span class="t-highlight">"SAP BW"</span>],</span></div>
+            <div class="t-line"><span class="t-output">&nbsp;&nbsp;"status": <span class="t-highlight">"open_to_work"</span> }</span></div>
+            <div class="t-line" style="margin-top:0.5rem;"><span class="t-prompt">$</span><span class="t-cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title" data-index="02">Skills & Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+          <ul class="skills-list">
+            <li><i class="fas fa-code"></i> Data Analysis & Manipulation</li>
+            <li><i class="fas fa-database"></i> Database Management</li>
+            <li><i class="fas fa-chart-line"></i> Data Visualization</li>
+            <li><i class="fas fa-robot"></i> Machine Learning</li>
+            <li><i class="fas fa-cloud"></i> Cloud Computing</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal" style="transition-delay:0.1s">
+          <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+          <ul class="skills-list">
+            <li><i class="fab fa-microsoft"></i> Power BI</li>
+            <li><i class="fas fa-file-excel"></i> Excel / Google Sheets</li>
+            <li><i class="fas fa-database"></i> SQL / SAP BW</li>
+            <li><i class="fab fa-python"></i> Python (scikit-learn, pandas)</li>
+            <li><i class="fas fa-bolt"></i> Power Automate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title" data-index="03">Work History</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">Feb 2022 – Sept 2024</div>
+          <div class="timeline-content">
+            <h3>Data Analyst</h3>
+            <h4>Nestlé — Harare, ZW</h4>
+            <ul>
+              <li><i class="fas fa-chart-line"></i> Designed BI Report for daily sales tracking and BU targets monitoring, improving decision-making efficiency</li>
+              <li><i class="fas fa-robot"></i> Built Accounts Receivables Report in Power BI, integrated with SAP BW and automated via Power Automate</li>
+              <li><i class="fas fa-users"></i> Led Zimbabwe Sales Automation Project, training Merchandising Agency and Distributors</li>
+              <li><i class="fas fa-tachometer-alt"></i> Created consolidated Sales &amp; Inventory dashboard using SAP Business Objects + Microsoft Excel</li>
+              <li><i class="fas fa-search-dollar"></i> Conducted market research and category share analysis guiding strategic marketing initiatives</li>
+              <li><i class="fas fa-calculator"></i> Simulated profitable volume and product mix scenarios for monthly production and sales planning</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Sep 2019 – Jan 2022</div>
+          <div class="timeline-content">
+            <h3>Inventory Analyst</h3>
+            <h4>Zuva Petroleum (formerly BP &amp; Shell Zimbabwe) — Harare, ZW</h4>
+            <ul>
+              <li><i class="fas fa-chart-bar"></i> Led business dynamic forecasting for monthly sales planning and inventory optimization</li>
+              <li><i class="fas fa-truck"></i> Tracked fleet statistics and route optimization, reducing costs and improving delivery efficiency</li>
+              <li><i class="fas fa-check-double"></i> Product reconciliations with all Terminals and regional LPG suppliers</li>
+              <li><i class="fas fa-warehouse"></i> Managed inventory across three product warehouses maintaining accurate product variances</li>
+              <li><i class="fas fa-tachometer-alt"></i> Developed Automated Operations Dashboard streamlining planning and resource utilization</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title" data-index="04">Featured Projects</h2>
+      <div class="projects-carousel">
+        <button class="carousel-button prev" aria-label="Previous">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="projects-container">
+          <div class="projects-track">
+
+            <article class="project-card">
+              <div class="project-image">
+                <img src="images/zse.jpg" alt="LSTM ZSE">
+              </div>
+              <div class="project-content">
+                <h3>Stock Price Prediction Using LSTM on ZSE</h3>
+                <p>A modified RNN that solves vanishing gradient using the three-gates LSTM architecture on Zimbabwe Stock Exchange data.</p>
+                <ul class="project-tags">
+                  <li><i class="fab fa-python"></i> Python</li>
+                  <li>Colab</li>
+                  <li>ML</li>
+                </ul>
+                <a href="https://github.com/tapiwamesa/LSTM-ZSE-Price-Prediction-/blob/main/Final_Viva.ipynb" target="_blank" class="button sm">View Project →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image">
+                <img src="images/ETL.jpg" alt="ETL Pipeline">
+              </div>
+              <div class="project-content">
+                <h3>Zimbabwe Housing Market ETL Pipeline</h3>
+                <p>Python web scraper, SQL Server storage, and Power BI visualization for housing market analysis.</p>
+                <ul class="project-tags">
+                  <li><i class="fab fa-python"></i> Python</li>
+                  <li><i class="fas fa-database"></i> SQL</li>
+                  <li>Power BI</li>
+                </ul>
+                <a href="https://github.com/tapiwamesa/End-to-End-ETL-process-for-Zimbabwe-Housing-Data/blob/main/zw_housing_scrapping.ipynb" target="_blank" class="button sm">View Project →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image">
+                <img src="images/supermarket.jpg" alt="Superstore Analysis">
+              </div>
+              <div class="project-content">
+                <h3>Global Superstore Analysis</h3>
+                <p>SQL analysis of shipping costs, profit and discounts to optimize business operations.</p>
+                <ul class="project-tags">
+                  <li><i class="fas fa-database"></i> SQL</li>
+                  <li>Analytics</li>
+                </ul>
+                <a href="https://github.com/tapiwamesa/SQL-Projects/blob/main/Sales%20Analysis%20SQL.ipynb" target="_blank" class="button sm">View Project →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image">
+                <img src="images/house.jpg" alt="Housing Prediction">
+              </div>
+              <div class="project-content">
+                <h3>Housing Price Prediction App</h3>
+                <p>Streamlit app for housing price prediction, continuation of the ETL pipeline project.</p>
+                <ul class="project-tags">
+                  <li><i class="fab fa-python"></i> scikit-learn</li>
+                  <li>Streamlit</li>
+                </ul>
+                <a href="https://hararehouseprices.streamlit.app/" target="_blank" class="button sm">View App →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image">
+                <img src="images/fraud.jpg" alt="Fraud Detection">
+              </div>
+              <div class="project-content">
+                <h3>Financial Fraud Detection Using ML</h3>
+                <p>Fraud detection using Logistic Regression, Random Forest and Gradient Boosting on a class-imbalanced dataset.</p>
+                <ul class="project-tags">
+                  <li><i class="fab fa-python"></i> scikit-learn</li>
+                </ul>
+                <a href="https://github.com/tapiwamesa/Bank-Fraud-Detection-Using-Machine-Learning" target="_blank" class="button sm">View Project →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image">
+                <img src="images/L2.jpg" alt="L2 Regularization">
+              </div>
+              <div class="project-content">
+                <h3>Effectiveness of L2 Regularization on Polynomial Features</h3>
+                <p>Comparative analysis of OLS and Polynomial regression with Ridge regularization.</p>
+                <ul class="project-tags">
+                  <li><i class="fab fa-python"></i> scikit-learn</li>
+                </ul>
+                <a href="https://github.com/tapiwamesa/OLS-to-Polynomial-Features-Ridge-Regression" target="_blank" class="button sm">View Project →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image">
+                <img src="images/mtn.jpg" alt="Customer Churn">
+              </div>
+              <div class="project-content">
+                <h3>Customer Churn Prediction — MTN Nigeria</h3>
+                <p>Model identifying customers at high risk of churning based on historical behavioral patterns.</p>
+                <ul class="project-tags">
+                  <li><i class="fab fa-python"></i> scikit-learn</li>
+                </ul>
+                <a href="https://github.com/tapiwamesa/MTN-Nigeria-customer-churn-prediction-model" target="_blank" class="button sm">View Project →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image">
+                <img src="images/Covid.jpg" alt="India Covid Analysis">
+              </div>
+              <div class="project-content">
+                <h3>Indian States Covid-19 Analysis</h3>
+                <p>Python notebook analyzing Indian state-wise Covid-19 statistics with pandas and matplotlib.</p>
+                <ul class="project-tags">
+                  <li><i class="fab fa-python"></i> pandas</li>
+                  <li>matplotlib</li>
+                </ul>
+                <a href="https://github.com/tapiwamesa/India_Covid_States/blob/main/India_covid_statewise.ipynb" target="_blank" class="button sm">View Project →</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+        <button class="carousel-button next" aria-label="Next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title" data-index="05">Get in Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3><i class="fas fa-satellite-dish"></i> Contact Channels</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> tapiwamesah@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +263 778 911 774</li>
+            <li><i class="fas fa-map-marker-alt"></i> Harare, Zimbabwe</li>
+          </ul>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/tapiwamesa/" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/tapiwamesa" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="reveal" style="transition-delay:0.15s">
+          <div class="about-terminal">
+            <div class="terminal-bar">
+              <div class="terminal-dot"></div>
+              <div class="terminal-dot"></div>
+              <div class="terminal-dot"></div>
+              <span class="terminal-title">mesa@portfolio ~ availability.sh</span>
             </div>
+            <div class="terminal-body">
+              <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">check status</span></div>
+              <div class="t-line"><span class="t-output">Status: <span class="t-highlight">OPEN TO OPPORTUNITIES</span></span></div>
+              <div class="t-line"><span class="t-output">Type: <span class="t-highlight">Full-time / Contract</span></span></div>
+              <div class="t-line"><span class="t-output">Remote: <span class="t-highlight">Yes</span></span></div>
+              <div class="t-line"><span class="t-output">Relocation: <span class="t-highlight">Negotiable</span></span></div>
+              <div class="t-line" style="margin-top:0.5rem;"><span class="t-prompt">$</span><span class="t-cmd">ping tapiwamesa</span></div>
+              <div class="t-line"><span class="t-output">Reply from <span class="t-highlight">tapiwamesah@gmail.com</span></span></div>
+              <div class="t-line"><span class="t-output">Response time: <span class="t-highlight">&lt; 24h</span></span></div>
+              <div class="t-line" style="margin-top:0.5rem;"><span class="t-prompt">$</span><span class="t-cursor"></span></div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> mesa</p>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <p>© <span id="year"></span> TAPIWA MESA — Built with precision &amp; caffeine</p>
+    </div>
+  </footer>
 
-    <script>
-        // Current year for footer
-        document.getElementById('year').textContent = new Date().getFullYear();
+  <script>
+  // ================================
+  // CUSTOM CURSOR
+  // ================================
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
 
-        // Animation delays for project cards
-        document.querySelectorAll('.project-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.1}s`;
-        });
-    </script>
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.left = mouseX + 'px';
+    dot.style.top = mouseY + 'px';
+  });
 
-	<script src="main.js"></script>
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    ring.style.left = ringX + 'px';
+    ring.style.top = ringY + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  document.querySelectorAll('a, button, .project-card, .skill-category').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
+  });
+
+  // ================================
+  // PARTICLE CANVAS
+  // ================================
+  const canvas = document.getElementById('particle-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  class Particle {
+    constructor() { this.reset(); }
+    reset() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 1.5 + 0.3;
+      this.speedX = (Math.random() - 0.5) * 0.3;
+      this.speedY = (Math.random() - 0.5) * 0.3;
+      this.opacity = Math.random() * 0.5 + 0.1;
+      this.color = Math.random() > 0.7 ? '#00f5ff' : Math.random() > 0.5 ? '#bf00ff' : '#00ff88';
+    }
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.globalAlpha = this.opacity;
+      ctx.fill();
+    }
+  }
+
+  for (let i = 0; i < 120; i++) particles.push(new Particle());
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.globalAlpha = 1;
+    particles.forEach(p => { p.update(); p.draw(); });
+    // Draw connecting lines
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < 100) {
+          ctx.beginPath();
+          ctx.strokeStyle = '#00f5ff';
+          ctx.globalAlpha = (1 - dist/100) * 0.08;
+          ctx.lineWidth = 0.5;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(animateParticles);
+  }
+  animateParticles();
+
+  // ================================
+  // COUNTER ANIMATION
+  // ================================
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.count);
+    let current = 0;
+    const step = target / 40;
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { current = target; clearInterval(timer); }
+      el.textContent = Math.floor(current) + '+';
+    }, 40);
+  }
+
+  // ================================
+  // SCROLL REVEAL + TIMELINE
+  // ================================
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // counter
+        if (entry.target.classList.contains('num')) animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal, .timeline-item, .num').forEach(el => observer.observe(el));
+
+  // ================================
+  // MOBILE MENU
+  // ================================
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('nav');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    nav.querySelector('ul').classList.toggle('active');
+  });
+
+  document.querySelectorAll('#nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      toggle.classList.remove('active');
+      nav.querySelector('ul').classList.remove('active');
+    });
+  });
+
+  // ================================
+  // CAROUSEL
+  // ================================
+  const track = document.querySelector('.projects-track');
+  if (track) {
+    const container = document.querySelector('.projects-container');
+    const nextBtn = document.querySelector('.carousel-button.next');
+    const prevBtn = document.querySelector('.carousel-button.prev');
+    let pos = 0;
+
+    function cardWidth() {
+      return document.querySelector('.project-card').offsetWidth;
+    }
+    function gap() { return 24; }
+    function maxScroll() { return -(track.scrollWidth - container.offsetWidth); }
+    function updateBtns() {
+      prevBtn.disabled = pos >= 0;
+      nextBtn.disabled = pos <= maxScroll();
+    }
+    function scrollTo(p) {
+      pos = p;
+      track.style.transform = `translateX(${pos}px)`;
+      updateBtns();
+    }
+
+    nextBtn.addEventListener('click', () => scrollTo(Math.max(pos - (cardWidth() + gap()), maxScroll())));
+    prevBtn.addEventListener('click', () => scrollTo(Math.min(pos + (cardWidth() + gap()), 0)));
+    window.addEventListener('resize', () => { pos = 0; scrollTo(0); });
+    updateBtns();
+  }
+
+  // ================================
+  // ANIMATION DELAYS
+  // ================================
+  document.querySelectorAll('.project-card').forEach((card, i) => {
+    card.style.animationDelay = `${i * 0.08}s`;
+  });
+
+  // FOOTER YEAR
+  document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
