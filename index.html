@@ -3,37 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tapiwa Mesa — Data Analyst</title>
+  <title>Tapiwa Mesa — Data Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-  <!-- Custom Cursor -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- Particle Canvas -->
+  <div class="cur-dot" id="curDot"></div>
+  <div class="cur-ring" id="curRing"></div>
   <canvas id="particle-canvas"></canvas>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header id="header">
     <div class="container">
       <a href="index.html" class="logo">T.MESA</a>
 
-      <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
 
       <nav id="nav">
-        <ul>
-          <li><a href="#projects" class="nav-button">Work</a></li>
-          <li><a href="assets/cv/TapiwaMesa_Resume.pdf" target="_blank" class="nav-button outline">Resume ↗</a></li>
+        <ul id="navList">
+          <li><a href="#projects" class="nav-cta">Projects</a></li>
+          <li><a href="assets/cv/TapiwaMesa_Resume.pdf" target="_blank" class="nav-out">Resume ↗</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#pipeline">Pipeline</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -45,117 +43,232 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section id="hero">
     <div class="container">
-      <div class="hero-inner">
-        <p class="hero-eyebrow">Initializing portfolio_v2025.exe</p>
-        <h1>
-          <span class="hero-name-line glitch" data-text="TAPIWA MESA">TAPIWA MESA</span>
-          <span class="hero-title-line">Senior Data Analyst</span>
-        </h1>
-        <p class="hero-desc">
-          Transforming raw data into actionable intelligence through advanced analytics,
-          BI engineering and machine learning. Building systems that make decisions smarter.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projects" class="button">View Projects</a>
-          <a href="assets/cv/TapiwaMesa_Resume.pdf" target="_blank" class="button outline">Download Resume ↗</a>
-        </div>
-        <div class="hero-stat-row">
-          <div class="hero-stat">
-            <span class="num" data-count="5">0</span>
-            <span class="label">Years Experience</span>
-          </div>
-          <div class="hero-stat">
-            <span class="num" data-count="8">0</span>
-            <span class="label">Projects Shipped</span>
-          </div>
-          <div class="hero-stat">
-            <span class="num" data-count="2">0</span>
-            <span class="label">Industries Served</span>
-          </div>
-        </div>
+      <p class="hero-badge">Initializing data_engineer_v2025.sh</p>
+      <h1>
+        <span class="name-grad">TAPIWA MESA</span>
+        <span class="title-sub">Data Analyst → Data Engineer</span>
+      </h1>
+      <p class="hero-desc">
+        5+ years turning data chaos into reliable pipelines, BI systems and ML models.
+        Now building the infrastructure that powers data at scale — ETL, orchestration,
+        warehousing and beyond.
+      </p>
+      <!-- DE Tech Stack Pills -->
+      <div class="de-stack">
+        <span class="stack-pill">Python</span>
+        <span class="stack-pill">SQL / T-SQL</span>
+        <span class="stack-pill">Power BI</span>
+        <span class="stack-pill">SAP BW</span>
+        <span class="stack-pill">ETL Pipelines</span>
+        <span class="stack-pill">Power Automate</span>
+        <span class="stack-pill">scikit-learn</span>
+        <span class="stack-pill">Streamlit</span>
+        <span class="stack-pill">dbt (learning)</span>
+        <span class="stack-pill">Airflow (learning)</span>
+      </div>
+      <div class="hero-buttons">
+        <a href="#projects" class="button">View Projects</a>
+        <a href="assets/cv/TapiwaMesa_Resume.pdf" target="_blank" class="button sec">Download CV ↗</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="num" data-count="5">0</span><span class="lbl">Yrs Experience</span></div>
+        <div class="stat"><span class="num" data-count="8">0</span><span class="lbl">Projects Built</span></div>
+        <div class="stat"><span class="num" data-count="2">0</span><span class="lbl">Industries</span></div>
+        <div class="stat"><span class="num" data-count="3">0</span><span class="lbl">Pipelines Shipped</span></div>
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container">
-      <h2 class="section-title" data-index="01">About Me</h2>
-      <div class="about-content">
+      <h2 class="section-title"><span class="s-num">01 //</span> About Me</h2>
+      <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            A <strong>Data Analyst</strong> dedicated to developing business intelligence solutions
-            that leverage best-practice technologies to deliver data-driven insights.
+            I'm a <strong>Senior Data Analyst</strong> with 5+ years of experience at Nestlé and Zuva Petroleum,
+            building BI dashboards, automating reports and running ML experiments that directly influenced
+            business strategy.
           </p>
-          <p style="margin-top:1rem;">
-            With over <strong>5 years</strong> of experience spanning data analytics, statistical analysis
-            and BI development, I bridge the gap between raw data and strategic action — 
-            from manufacturing forecasting at <strong>Nestlé</strong> to inventory intelligence at
-            <strong>Zuva Petroleum</strong>.
+          <p>
+            My foundation is strong: <strong>SQL, Python, Power BI, SAP BW</strong> and end-to-end ETL work.
+            I've connected data sources, modeled schemas, and delivered dashboards used by C-suite teams.
           </p>
-          <p style="margin-top:1rem;">
-            I build pipelines, dashboards and ML models that don't just look good —
-            they drive real operational change.
-          </p>
-        </div>
-        <div class="about-terminal reveal">
-          <div class="terminal-bar">
-            <div class="terminal-dot"></div>
-            <div class="terminal-dot"></div>
-            <div class="terminal-dot"></div>
-            <span class="terminal-title">mesa@portfolio ~ profile.sh</span>
+          <div class="pivot-banner">
+            <div class="pb-label">⚡ Current Direction</div>
+            <p>
+              Pivoting into <strong>Data Engineering</strong> — formalising skills in pipeline orchestration
+              (Airflow), data transformation (dbt), cloud warehousing (BigQuery / Snowflake) and streaming.
+              My goal: move from consuming data infrastructure to building it.
+            </p>
           </div>
-          <div class="terminal-body">
-            <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat profile.json</span></div>
-            <div class="t-line"><span class="t-output">{ "role": <span class="t-highlight">"Senior Data Analyst"</span>,</span></div>
-            <div class="t-line"><span class="t-output">&nbsp;&nbsp;"location": <span class="t-highlight">"Harare, ZW"</span>,</span></div>
-            <div class="t-line"><span class="t-output">&nbsp;&nbsp;"exp_years": <span class="t-highlight">5</span>,</span></div>
-            <div class="t-line"><span class="t-output">&nbsp;&nbsp;"stack": [<span class="t-highlight">"Python"</span>, <span class="t-highlight">"SQL"</span>,</span></div>
-            <div class="t-line"><span class="t-output">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-highlight">"Power BI"</span>, <span class="t-highlight">"SAP BW"</span>],</span></div>
-            <div class="t-line"><span class="t-output">&nbsp;&nbsp;"status": <span class="t-highlight">"open_to_work"</span> }</span></div>
-            <div class="t-line" style="margin-top:0.5rem;"><span class="t-prompt">$</span><span class="t-cursor"></span></div>
+        </div>
+        <div class="terminal reveal" style="transition-delay:.12s">
+          <div class="t-bar">
+            <div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div>
+            <span class="t-file">mesa@de-journey ~ profile.py</span>
+          </div>
+          <div class="t-body">
+            <div class="t-row"><span class="t-p">$</span><span class="t-c">python profile.py</span></div>
+            <div class="t-row"><span class="t-o">current_role = <span class="t-v">"Senior Data Analyst"</span></span></div>
+            <div class="t-row"><span class="t-o">target_role  = <span class="t-v">"Data Engineer"</span></span></div>
+            <div class="t-row"><span class="t-o">stack = [<span class="t-v">"Python"</span>, <span class="t-v">"SQL"</span>,</span></div>
+            <div class="t-row"><span class="t-o">&nbsp;&nbsp;<span class="t-v">"Power BI"</span>, <span class="t-v">"SAP BW"</span>,</span></div>
+            <div class="t-row"><span class="t-o">&nbsp;&nbsp;<span class="t-v">"dbt"</span>, <span class="t-v">"Airflow"</span>]</span></div>
+            <div class="t-row"><span class="t-o">status = <span class="t-s">"open_to_work"</span></span></div>
+            <div class="t-row"><span class="t-o">location = <span class="t-v">"Harare, ZW"</span></span></div>
+            <div class="t-row" style="margin-top:.4rem;"><span class="t-p">$</span><span class="t-cur"></span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- SKILLS -->
   <section id="skills" class="section">
     <div class="container">
-      <h2 class="section-title" data-index="02">Skills & Tools</h2>
+      <h2 class="section-title"><span class="s-num">02 //</span> Skills & Tools</h2>
       <div class="skills-grid">
+
         <div class="skill-category reveal">
-          <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+          <h3><i class="fas fa-pipe-section"></i> Data Engineering</h3>
           <ul class="skills-list">
-            <li><i class="fas fa-code"></i> Data Analysis & Manipulation</li>
-            <li><i class="fas fa-database"></i> Database Management</li>
-            <li><i class="fas fa-chart-line"></i> Data Visualization</li>
-            <li><i class="fas fa-robot"></i> Machine Learning</li>
-            <li><i class="fas fa-cloud"></i> Cloud Computing</li>
+            <li><i class="fas fa-code-branch"></i> ETL / ELT Pipeline Design</li>
+            <li><i class="fas fa-database"></i> Data Warehousing &amp; Modelling</li>
+            <li><i class="fas fa-cogs"></i> Workflow Orchestration</li>
+            <li><i class="fas fa-stream"></i> Data Integration &amp; APIs</li>
+            <li><i class="fas fa-cloud-upload-alt"></i> Cloud Data Platforms</li>
           </ul>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>ETL / Pipeline</span><span>82%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-w="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>SQL / Warehousing</span><span>88%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-w="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>Python (Pandas/PySpark)</span><span>75%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-w="75"></div></div>
+            </div>
+          </div>
         </div>
-        <div class="skill-category reveal" style="transition-delay:0.1s">
-          <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+
+        <div class="skill-category reveal" style="transition-delay:.08s">
+          <h3><i class="fas fa-chart-network"></i> Analytics &amp; BI</h3>
           <ul class="skills-list">
-            <li><i class="fab fa-microsoft"></i> Power BI</li>
+            <li><i class="fab fa-microsoft"></i> Power BI / DAX</li>
+            <li><i class="fas fa-server"></i> SAP BW / Business Objects</li>
             <li><i class="fas fa-file-excel"></i> Excel / Google Sheets</li>
-            <li><i class="fas fa-database"></i> SQL / SAP BW</li>
-            <li><i class="fab fa-python"></i> Python (scikit-learn, pandas)</li>
+            <li><i class="fas fa-chart-bar"></i> Data Visualization</li>
             <li><i class="fas fa-bolt"></i> Power Automate</li>
           </ul>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>Power BI</span><span>90%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-w="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>SAP BW</span><span>78%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-w="78"></div></div>
+            </div>
+          </div>
         </div>
+
+        <div class="skill-category reveal" style="transition-delay:.16s">
+          <h3><i class="fas fa-robot"></i> ML &amp; Science</h3>
+          <ul class="skills-list">
+            <li><i class="fab fa-python"></i> Python (scikit-learn, pandas)</li>
+            <li><i class="fas fa-brain"></i> Supervised / Unsupervised ML</li>
+            <li><i class="fas fa-wave-square"></i> Time Series (LSTM)</li>
+            <li><i class="fas fa-balance-scale"></i> Model Evaluation</li>
+            <li><i class="fas fa-ship"></i> Streamlit Deployment</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
+  <!-- DATA PIPELINE SECTION -->
+  <section id="pipeline" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="s-num">03 //</span> My Data Pipeline Stack</h2>
+      <p style="font-size:.9rem; color:var(--text-muted); margin-bottom:2rem; font-family:var(--font-mono); max-width:600px;">
+        How I think about end-to-end data infrastructure — from raw ingestion to business insight.
+      </p>
+      <div class="pipeline-flow reveal">
+
+        <div class="pipe-stage">
+          <div class="ps-icon"><i class="fas fa-database"></i></div>
+          <div class="ps-name">Ingest</div>
+          <div class="ps-tools">
+            <span>Python / Requests</span>
+            <span>BeautifulSoup</span>
+            <span>REST APIs</span>
+            <span>SAP extractors</span>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="pipe-stage">
+          <div class="ps-icon"><i class="fas fa-code-branch"></i></div>
+          <div class="ps-name">Transform</div>
+          <div class="ps-tools">
+            <span>Python / Pandas</span>
+            <span>SQL / T-SQL</span>
+            <span>dbt (learning)</span>
+            <span>Power Query</span>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="pipe-stage">
+          <div class="ps-icon"><i class="fas fa-warehouse"></i></div>
+          <div class="ps-name">Store</div>
+          <div class="ps-tools">
+            <span>SQL Server</span>
+            <span>SAP BW</span>
+            <span>BigQuery (learning)</span>
+            <span>Flat files / CSV</span>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="pipe-stage">
+          <div class="ps-icon"><i class="fas fa-cogs"></i></div>
+          <div class="ps-name">Orchestrate</div>
+          <div class="ps-tools">
+            <span>Power Automate</span>
+            <span>Scheduled scripts</span>
+            <span>Airflow (learning)</span>
+          </div>
+        </div>
+        <div class="pipe-arrow"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="pipe-stage">
+          <div class="ps-icon"><i class="fas fa-chart-bar"></i></div>
+          <div class="ps-name">Serve</div>
+          <div class="ps-tools">
+            <span>Power BI</span>
+            <span>SAP Biz Objects</span>
+            <span>Streamlit</span>
+            <span>Excel reports</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
   <section id="experience" class="section">
     <div class="container">
-      <h2 class="section-title" data-index="03">Work History</h2>
+      <h2 class="section-title"><span class="s-num">04 //</span> Work History</h2>
       <div class="timeline">
 
         <div class="timeline-item">
@@ -164,10 +277,10 @@
             <h3>Data Analyst</h3>
             <h4>Nestlé — Harare, ZW</h4>
             <ul>
-              <li><i class="fas fa-chart-line"></i> Designed BI Report for daily sales tracking and BU targets monitoring, improving decision-making efficiency</li>
-              <li><i class="fas fa-robot"></i> Built Accounts Receivables Report in Power BI, integrated with SAP BW and automated via Power Automate</li>
-              <li><i class="fas fa-users"></i> Led Zimbabwe Sales Automation Project, training Merchandising Agency and Distributors</li>
-              <li><i class="fas fa-tachometer-alt"></i> Created consolidated Sales &amp; Inventory dashboard using SAP Business Objects + Microsoft Excel</li>
+              <li><i class="fas fa-stream"></i> Designed and developed a BI Report for daily sales tracking, BU targets monitoring and business analysis improving decision-making efficiency</li>
+              <li><i class="fas fa-plug"></i> Developed Accounts Receivables Report in Power BI, integrated with SAP BW and automated via Power Automate — real-time financial pipeline for management</li>
+              <li><i class="fas fa-users"></i> Led the Zimbabwe Sales Automation Project, training Merchandising Agency and Distributors</li>
+              <li><i class="fas fa-tachometer-alt"></i> Built consolidated Sales &amp; Inventory dashboard using SAP Business Objects + SAP BW + Excel</li>
               <li><i class="fas fa-search-dollar"></i> Conducted market research and category share analysis guiding strategic marketing initiatives</li>
               <li><i class="fas fa-calculator"></i> Simulated profitable volume and product mix scenarios for monthly production and sales planning</li>
             </ul>
@@ -180,11 +293,11 @@
             <h3>Inventory Analyst</h3>
             <h4>Zuva Petroleum (formerly BP &amp; Shell Zimbabwe) — Harare, ZW</h4>
             <ul>
-              <li><i class="fas fa-chart-bar"></i> Led business dynamic forecasting for monthly sales planning and inventory optimization</li>
-              <li><i class="fas fa-truck"></i> Tracked fleet statistics and route optimization, reducing costs and improving delivery efficiency</li>
+              <li><i class="fas fa-chart-bar"></i> Led dynamic forecasting for monthly sales planning, inventory optimisation and product loss management</li>
+              <li><i class="fas fa-truck"></i> Fleet statistics tracking and route optimisation, reducing costs and improving delivery efficiency</li>
               <li><i class="fas fa-check-double"></i> Product reconciliations with all Terminals and regional LPG suppliers</li>
               <li><i class="fas fa-warehouse"></i> Managed inventory across three product warehouses maintaining accurate product variances</li>
-              <li><i class="fas fa-tachometer-alt"></i> Developed Automated Operations Dashboard streamlining planning and resource utilization</li>
+              <li><i class="fas fa-tachometer-alt"></i> Developed Automated Operations Dashboard — end-to-end planning pipeline across all Zimbabwe terminals</li>
             </ul>
           </div>
         </div>
@@ -193,149 +306,106 @@
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- PROJECTS -->
   <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-title" data-index="04">Featured Projects</h2>
+      <h2 class="section-title"><span class="s-num">05 //</span> Featured Projects</h2>
       <div class="projects-carousel">
-        <button class="carousel-button prev" aria-label="Previous">
-          <i class="fas fa-chevron-left"></i>
-        </button>
+        <button class="carousel-button prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
         <div class="projects-container">
           <div class="projects-track">
 
-            <article class="project-card">
-              <div class="project-image">
-                <img src="images/zse.jpg" alt="LSTM ZSE">
-              </div>
+            <article class="project-card" data-de="true">
+              <div class="project-image"><img src="images/ETL.jpg" alt="ETL Pipeline"></div>
               <div class="project-content">
-                <h3>Stock Price Prediction Using LSTM on ZSE</h3>
-                <p>A modified RNN that solves vanishing gradient using the three-gates LSTM architecture on Zimbabwe Stock Exchange data.</p>
-                <ul class="project-tags">
-                  <li><i class="fab fa-python"></i> Python</li>
-                  <li>Colab</li>
-                  <li>ML</li>
-                </ul>
+                <h3>Zimbabwe Housing Market ETL Pipeline</h3>
+                <p>Python web scraper → SQL Server storage → Power BI visualization. Full end-to-end data pipeline for housing market analysis.</p>
+                <ul class="project-tags"><li><i class="fab fa-python"></i> Python</li><li>SQL Server</li><li>Power BI</li><li>ETL</li></ul>
+                <a href="https://github.com/tapiwamesa/End-to-End-ETL-process-for-Zimbabwe-Housing-Data/blob/main/zw_housing_scrapping.ipynb" target="_blank" class="button sm">View Project →</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-de="true">
+              <div class="project-image"><img src="images/house.jpg" alt="Housing App"></div>
+              <div class="project-content">
+                <h3>Housing Price Prediction App</h3>
+                <p>ML-powered Streamlit app — continuation of the ETL pipeline. Scraped data → cleaned → modelled → deployed as interactive app.</p>
+                <ul class="project-tags"><li><i class="fab fa-python"></i> scikit-learn</li><li>Streamlit</li><li>ML</li></ul>
+                <a href="https://hararehouseprices.streamlit.app/" target="_blank" class="button sm">View Live App →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image"><img src="images/zse.jpg" alt="LSTM ZSE"></div>
+              <div class="project-content">
+                <h3>Stock Price Prediction using LSTM on ZSE</h3>
+                <p>Modified RNN solving vanishing gradient via three-gates LSTM architecture on Zimbabwe Stock Exchange data.</p>
+                <ul class="project-tags"><li><i class="fab fa-python"></i> Python</li><li>Colab</li><li>LSTM</li><li>ML</li></ul>
                 <a href="https://github.com/tapiwamesa/LSTM-ZSE-Price-Prediction-/blob/main/Final_Viva.ipynb" target="_blank" class="button sm">View Project →</a>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="project-image">
-                <img src="images/ETL.jpg" alt="ETL Pipeline">
-              </div>
+              <div class="project-image"><img src="images/supermarket.jpg" alt="Superstore"></div>
               <div class="project-content">
-                <h3>Zimbabwe Housing Market ETL Pipeline</h3>
-                <p>Python web scraper, SQL Server storage, and Power BI visualization for housing market analysis.</p>
-                <ul class="project-tags">
-                  <li><i class="fab fa-python"></i> Python</li>
-                  <li><i class="fas fa-database"></i> SQL</li>
-                  <li>Power BI</li>
-                </ul>
-                <a href="https://github.com/tapiwamesa/End-to-End-ETL-process-for-Zimbabwe-Housing-Data/blob/main/zw_housing_scrapping.ipynb" target="_blank" class="button sm">View Project →</a>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image">
-                <img src="images/supermarket.jpg" alt="Superstore Analysis">
-              </div>
-              <div class="project-content">
-                <h3>Global Superstore Analysis</h3>
-                <p>SQL analysis of shipping costs, profit and discounts to optimize business operations.</p>
-                <ul class="project-tags">
-                  <li><i class="fas fa-database"></i> SQL</li>
-                  <li>Analytics</li>
-                </ul>
+                <h3>Global Superstore SQL Analysis</h3>
+                <p>Deep SQL analysis of shipping costs, profit margins and discount strategies to optimise business operations.</p>
+                <ul class="project-tags"><li>SQL</li><li>Analytics</li></ul>
                 <a href="https://github.com/tapiwamesa/SQL-Projects/blob/main/Sales%20Analysis%20SQL.ipynb" target="_blank" class="button sm">View Project →</a>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="project-image">
-                <img src="images/house.jpg" alt="Housing Prediction">
-              </div>
+              <div class="project-image"><img src="images/fraud.jpg" alt="Fraud Detection"></div>
               <div class="project-content">
-                <h3>Housing Price Prediction App</h3>
-                <p>Streamlit app for housing price prediction, continuation of the ETL pipeline project.</p>
-                <ul class="project-tags">
-                  <li><i class="fab fa-python"></i> scikit-learn</li>
-                  <li>Streamlit</li>
-                </ul>
-                <a href="https://hararehouseprices.streamlit.app/" target="_blank" class="button sm">View App →</a>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image">
-                <img src="images/fraud.jpg" alt="Fraud Detection">
-              </div>
-              <div class="project-content">
-                <h3>Financial Fraud Detection Using ML</h3>
-                <p>Fraud detection using Logistic Regression, Random Forest and Gradient Boosting on a class-imbalanced dataset.</p>
-                <ul class="project-tags">
-                  <li><i class="fab fa-python"></i> scikit-learn</li>
-                </ul>
+                <h3>Financial Fraud Detection using ML</h3>
+                <p>Logistic Regression, Random Forest and Gradient Boosting on a class-imbalanced financial dataset.</p>
+                <ul class="project-tags"><li><i class="fab fa-python"></i> scikit-learn</li><li>Imbalanced data</li></ul>
                 <a href="https://github.com/tapiwamesa/Bank-Fraud-Detection-Using-Machine-Learning" target="_blank" class="button sm">View Project →</a>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="project-image">
-                <img src="images/L2.jpg" alt="L2 Regularization">
-              </div>
+              <div class="project-image"><img src="images/L2.jpg" alt="Ridge Regression"></div>
               <div class="project-content">
-                <h3>Effectiveness of L2 Regularization on Polynomial Features</h3>
-                <p>Comparative analysis of OLS and Polynomial regression with Ridge regularization.</p>
-                <ul class="project-tags">
-                  <li><i class="fab fa-python"></i> scikit-learn</li>
-                </ul>
+                <h3>L2 Regularisation on Polynomial Features</h3>
+                <p>Comparative analysis of OLS vs Polynomial Ridge Regression — overfitting, bias-variance tradeoff.</p>
+                <ul class="project-tags"><li><i class="fab fa-python"></i> scikit-learn</li><li>Ridge</li></ul>
                 <a href="https://github.com/tapiwamesa/OLS-to-Polynomial-Features-Ridge-Regression" target="_blank" class="button sm">View Project →</a>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="project-image">
-                <img src="images/mtn.jpg" alt="Customer Churn">
-              </div>
+              <div class="project-image"><img src="images/mtn.jpg" alt="Churn"></div>
               <div class="project-content">
                 <h3>Customer Churn Prediction — MTN Nigeria</h3>
-                <p>Model identifying customers at high risk of churning based on historical behavioral patterns.</p>
-                <ul class="project-tags">
-                  <li><i class="fab fa-python"></i> scikit-learn</li>
-                </ul>
+                <p>Model identifying high-risk churners based on historical behavioral patterns. Data source: Kaggle.</p>
+                <ul class="project-tags"><li><i class="fab fa-python"></i> scikit-learn</li><li>Churn</li></ul>
                 <a href="https://github.com/tapiwamesa/MTN-Nigeria-customer-churn-prediction-model" target="_blank" class="button sm">View Project →</a>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="project-image">
-                <img src="images/Covid.jpg" alt="India Covid Analysis">
-              </div>
+              <div class="project-image"><img src="images/Covid.jpg" alt="Covid India"></div>
               <div class="project-content">
                 <h3>Indian States Covid-19 Analysis</h3>
-                <p>Python notebook analyzing Indian state-wise Covid-19 statistics with pandas and matplotlib.</p>
-                <ul class="project-tags">
-                  <li><i class="fab fa-python"></i> pandas</li>
-                  <li>matplotlib</li>
-                </ul>
+                <p>Python notebook analysing Indian state-wise Covid-19 statistics with pandas and matplotlib.</p>
+                <ul class="project-tags"><li><i class="fab fa-python"></i> pandas</li><li>matplotlib</li></ul>
                 <a href="https://github.com/tapiwamesa/India_Covid_States/blob/main/India_covid_statewise.ipynb" target="_blank" class="button sm">View Project →</a>
               </div>
             </article>
 
           </div>
         </div>
-        <button class="carousel-button next" aria-label="Next">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+        <button class="carousel-button next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title" data-index="05">Get in Touch</h2>
+      <h2 class="section-title"><span class="s-num">06 //</span> Get in Touch</h2>
       <div class="contact-grid">
         <div class="contact-info reveal">
           <h3><i class="fas fa-satellite-dish"></i> Contact Channels</h3>
@@ -345,229 +415,134 @@
             <li><i class="fas fa-map-marker-alt"></i> Harare, Zimbabwe</li>
           </ul>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/tapiwamesa/" target="_blank" title="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/tapiwamesa" target="_blank" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
+            <a href="https://www.linkedin.com/in/tapiwamesa/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/tapiwamesa" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
         </div>
-        <div class="reveal" style="transition-delay:0.15s">
-          <div class="about-terminal">
-            <div class="terminal-bar">
-              <div class="terminal-dot"></div>
-              <div class="terminal-dot"></div>
-              <div class="terminal-dot"></div>
-              <span class="terminal-title">mesa@portfolio ~ availability.sh</span>
-            </div>
-            <div class="terminal-body">
-              <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">check status</span></div>
-              <div class="t-line"><span class="t-output">Status: <span class="t-highlight">OPEN TO OPPORTUNITIES</span></span></div>
-              <div class="t-line"><span class="t-output">Type: <span class="t-highlight">Full-time / Contract</span></span></div>
-              <div class="t-line"><span class="t-output">Remote: <span class="t-highlight">Yes</span></span></div>
-              <div class="t-line"><span class="t-output">Relocation: <span class="t-highlight">Negotiable</span></span></div>
-              <div class="t-line" style="margin-top:0.5rem;"><span class="t-prompt">$</span><span class="t-cmd">ping tapiwamesa</span></div>
-              <div class="t-line"><span class="t-output">Reply from <span class="t-highlight">tapiwamesah@gmail.com</span></span></div>
-              <div class="t-line"><span class="t-output">Response time: <span class="t-highlight">&lt; 24h</span></span></div>
-              <div class="t-line" style="margin-top:0.5rem;"><span class="t-prompt">$</span><span class="t-cursor"></span></div>
-            </div>
+
+        <div class="terminal reveal" style="transition-delay:.1s">
+          <div class="t-bar">
+            <div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div>
+            <span class="t-file">mesa@de-journey ~ availability.sh</span>
+          </div>
+          <div class="t-body">
+            <div class="t-row"><span class="t-p">$</span><span class="t-c">./check_status.sh</span></div>
+            <div class="t-row"><span class="t-o">role_target: <span class="t-v">"Data Engineer"</span></span></div>
+            <div class="t-row"><span class="t-o">status: <span class="t-s">"OPEN TO OPPORTUNITIES"</span></span></div>
+            <div class="t-row"><span class="t-o">type: <span class="t-v">"Full-time / Contract"</span></span></div>
+            <div class="t-row"><span class="t-o">remote: <span class="t-v">true</span></span></div>
+            <div class="t-row"><span class="t-o">relocation: <span class="t-v">"negotiable"</span></span></div>
+            <div class="t-row" style="margin-top:.3rem;"><span class="t-p">$</span><span class="t-c">ping tapiwamesa</span></div>
+            <div class="t-row"><span class="t-o">response_time: <span class="t-s">"&lt; 24h"</span></span></div>
+            <div class="t-row" style="margin-top:.3rem;"><span class="t-p">$</span><span class="t-cur"></span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer id="footer">
     <div class="container">
-      <p>© <span id="year"></span> TAPIWA MESA — Built with precision &amp; caffeine</p>
+      <p>© <span id="year"></span> TAPIWA MESA — Data Analyst pivoting to Data Engineer — Built with precision</p>
     </div>
   </footer>
 
   <script>
-  // ================================
-  // CUSTOM CURSOR
-  // ================================
-  const dot = document.getElementById('cursorDot');
-  const ring = document.getElementById('cursorRing');
-  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top = mouseY + 'px';
+  // === CURSOR ===
+  const dot = document.getElementById('curDot');
+  const ring = document.getElementById('curRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+  (function tick(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(tick);})();
+  document.querySelectorAll('a,button,.project-card,.skill-category,.pipe-stage').forEach(el=>{
+    el.addEventListener('mouseenter',()=>ring.classList.add('hov'));
+    el.addEventListener('mouseleave',()=>ring.classList.remove('hov'));
   });
 
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
+  // === PARTICLES ===
+  const cv=document.getElementById('particle-canvas');
+  const ctx=cv.getContext('2d');
+  let pts=[];
+  function rsz(){cv.width=window.innerWidth;cv.height=window.innerHeight;}
+  rsz(); window.addEventListener('resize',rsz);
 
-  document.querySelectorAll('a, button, .project-card, .skill-category').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
-  });
-
-  // ================================
-  // PARTICLE CANVAS
-  // ================================
-  const canvas = document.getElementById('particle-canvas');
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  class Particle {
-    constructor() { this.reset(); }
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 1.5 + 0.3;
-      this.speedX = (Math.random() - 0.5) * 0.3;
-      this.speedY = (Math.random() - 0.5) * 0.3;
-      this.opacity = Math.random() * 0.5 + 0.1;
-      this.color = Math.random() > 0.7 ? '#00f5ff' : Math.random() > 0.5 ? '#bf00ff' : '#00ff88';
+  class P{
+    constructor(){this.reset();}
+    reset(){
+      this.x=Math.random()*cv.width; this.y=Math.random()*cv.height;
+      this.size=Math.random()*1.4+.3;
+      this.vx=(Math.random()-.5)*.28; this.vy=(Math.random()-.5)*.28;
+      this.op=Math.random()*.4+.08;
+      const r=Math.random();
+      this.color=r>.72?'#f59e0b':r>.45?'#2dd4bf':'#fb923c';
     }
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.globalAlpha = this.opacity;
-      ctx.fill();
-    }
+    update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>cv.width||this.y<0||this.y>cv.height)this.reset();}
+    draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fillStyle=this.color;ctx.globalAlpha=this.op;ctx.fill();}
   }
-
-  for (let i = 0; i < 120; i++) particles.push(new Particle());
-
-  function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.globalAlpha = 1;
-    particles.forEach(p => { p.update(); p.draw(); });
-    // Draw connecting lines
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < 100) {
-          ctx.beginPath();
-          ctx.strokeStyle = '#00f5ff';
-          ctx.globalAlpha = (1 - dist/100) * 0.08;
-          ctx.lineWidth = 0.5;
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.stroke();
-        }
+  for(let i=0;i<110;i++)pts.push(new P());
+  (function anim(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    ctx.globalAlpha=1;
+    pts.forEach(p=>{p.update();p.draw();});
+    for(let i=0;i<pts.length;i++){
+      for(let j=i+1;j<pts.length;j++){
+        const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<90){ctx.beginPath();ctx.strokeStyle='#f59e0b';ctx.globalAlpha=(1-d/90)*.07;ctx.lineWidth=.5;ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.stroke();}
       }
     }
-    requestAnimationFrame(animateParticles);
-  }
-  animateParticles();
+    requestAnimationFrame(anim);
+  })();
 
-  // ================================
-  // COUNTER ANIMATION
-  // ================================
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.count);
-    let current = 0;
-    const step = target / 40;
-    const timer = setInterval(() => {
-      current += step;
-      if (current >= target) { current = target; clearInterval(timer); }
-      el.textContent = Math.floor(current) + '+';
-    }, 40);
-  }
-
-  // ================================
-  // SCROLL REVEAL + TIMELINE
-  // ================================
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        // counter
-        if (entry.target.classList.contains('num')) animateCounter(entry.target);
-        observer.unobserve(entry.target);
+  // === SCROLL REVEAL + COUNTERS + TIMELINE + SKILL BARS ===
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(!en.isIntersecting)return;
+      const t=en.target;
+      t.classList.add('visible','vis');
+      if(t.classList.contains('num')){
+        const target=+t.dataset.count,step=target/45;
+        let c=0;
+        const iv=setInterval(()=>{c+=step;if(c>=target){c=target;clearInterval(iv);}t.textContent=Math.floor(c)+'+';},38);
       }
+      t.querySelectorAll&&t.querySelectorAll('.sb-fill').forEach(b=>{b.style.width=b.dataset.w+'%';});
+      obs.unobserve(t);
     });
-  }, { threshold: 0.15 });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal,.timeline-item,.num,.skill-category').forEach(el=>obs.observe(el));
 
-  document.querySelectorAll('.reveal, .timeline-item, .num').forEach(el => observer.observe(el));
-
-  // ================================
-  // MOBILE MENU
-  // ================================
-  const toggle = document.getElementById('menuToggle');
-  const nav = document.getElementById('nav');
-
-  toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-    nav.querySelector('ul').classList.toggle('active');
+  // === MOBILE MENU ===
+  document.getElementById('menuToggle').addEventListener('click',function(){
+    this.classList.toggle('active');
+    document.getElementById('navList').classList.toggle('open');
   });
+  document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{
+    document.getElementById('menuToggle').classList.remove('active');
+    document.getElementById('navList').classList.remove('open');
+  }));
 
-  document.querySelectorAll('#nav a').forEach(a => {
-    a.addEventListener('click', () => {
-      toggle.classList.remove('active');
-      nav.querySelector('ul').classList.remove('active');
-    });
-  });
-
-  // ================================
-  // CAROUSEL
-  // ================================
-  const track = document.querySelector('.projects-track');
-  if (track) {
-    const container = document.querySelector('.projects-container');
-    const nextBtn = document.querySelector('.carousel-button.next');
-    const prevBtn = document.querySelector('.carousel-button.prev');
-    let pos = 0;
-
-    function cardWidth() {
-      return document.querySelector('.project-card').offsetWidth;
-    }
-    function gap() { return 24; }
-    function maxScroll() { return -(track.scrollWidth - container.offsetWidth); }
-    function updateBtns() {
-      prevBtn.disabled = pos >= 0;
-      nextBtn.disabled = pos <= maxScroll();
-    }
-    function scrollTo(p) {
-      pos = p;
-      track.style.transform = `translateX(${pos}px)`;
-      updateBtns();
-    }
-
-    nextBtn.addEventListener('click', () => scrollTo(Math.max(pos - (cardWidth() + gap()), maxScroll())));
-    prevBtn.addEventListener('click', () => scrollTo(Math.min(pos + (cardWidth() + gap()), 0)));
-    window.addEventListener('resize', () => { pos = 0; scrollTo(0); });
-    updateBtns();
+  // === CAROUSEL ===
+  const track=document.querySelector('.projects-track');
+  if(track){
+    const cont=document.querySelector('.projects-container');
+    const nb=document.querySelector('.carousel-button.next');
+    const pb=document.querySelector('.carousel-button.prev');
+    let pos=0;
+    const cw=()=>document.querySelector('.project-card').offsetWidth;
+    const gap=()=>20;
+    const max=()=>-(track.scrollWidth-cont.offsetWidth);
+    const upd=()=>{pb.disabled=pos>=0;nb.disabled=pos<=max();};
+    const go=p=>{pos=p;track.style.transform=`translateX(${pos}px)`;upd();};
+    nb.addEventListener('click',()=>go(Math.max(pos-(cw()+gap()),max())));
+    pb.addEventListener('click',()=>go(Math.min(pos+(cw()+gap()),0)));
+    window.addEventListener('resize',()=>go(0));
+    // Animation delays
+    document.querySelectorAll('.project-card').forEach((c,i)=>c.style.animationDelay=`${i*.07}s`);
+    upd();
   }
 
-  // ================================
-  // ANIMATION DELAYS
-  // ================================
-  document.querySelectorAll('.project-card').forEach((card, i) => {
-    card.style.animationDelay = `${i * 0.08}s`;
-  });
-
-  // FOOTER YEAR
-  document.getElementById('year').textContent = new Date().getFullYear();
+  // === FOOTER YEAR ===
+  document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
